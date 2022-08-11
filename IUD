@@ -1,0 +1,31 @@
+INSERT INTO Temp_Table(field1, field2, field4, field3, field5, field6, field7, field8, field9, field10) 
+VALUES('data4','data4-2','data4-4','data4-3','data4-5','data4-6','data4-7','data4-8','data4-9','data4-10');
+
+
+* SELECT INSERT 
+INSERT INTO Temp_Table(field1, field2, field3, field4, field5, field6, field7, field8, field9, field10) 
+SELECT s_field1, s_field2, s_field3, s_field4, s_field5, s_field6, s_field7, s_field8, s_field9, s_field10
+FROM Sub_table ;
+
+
+UPDATE 
+UPDATE Temp_Table SET field3='변경된 값' WHERE field1 = 'data2';
+
+
+DELETE 
+DELETE FROM Temp_Table ;
+
+CREATE
+CREATE TABLE Temp_Table (
+field1    char(10)    NOT NULL ,
+field2    char(10)    NOT NULL ,
+field3    DECIMAL(8,2)    NOT NULL , 
+field4    varchar(1000)    NULL
+);
+
+열 추가
+ALTER TABLE Temp_Table ADD field5 char(10);
+이구문은 Temp_Table 에 케릭터(10)의 데이터 형식을 가진 field5 열을 추가 하였다.
+
+열 삭제
+ALTER TABLE Temp_Table DROP COLUMN field5 ;
